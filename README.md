@@ -29,7 +29,7 @@ now, let look at examples:
 - as we can see that the server that running Go program has a lower load than the server that running PHP program. this
   is because Go is a compiled language, so it's faster than PHP, which is an interpreted language.
 
-## Install Go:
+### Install Go:
 
 - [download Go](https://go.dev/dl/) and install Go for your OS
 - start your terminal and run command `go version` to check if Go is installed successfully
@@ -43,7 +43,7 @@ go version go1.20.4 darwin/amd64 # my version
 - [set up Go workspace](https://golang.org/doc/code.html#Workspaces)
 - install your favorite IDE or text editor. I will use [GoLand](https://www.jetbrains.com/go/) for this course.
 
-## Hello, World!
+### Hello, World!
 
 - now we can start coding a small program to test if everything is working fine.
 - first we need to initialize a Go module by running command `go mod init <full package name>`, in my case, I initialize
@@ -98,3 +98,35 @@ func main() {
 Hello, World!
 
 ```
+
+### Variables & Functions
+
+- in Go, we use `var` keyword to declare a variable with Camel case name convention. the syntax is:
+
+  ```go
+  var variableName variableType
+  ```
+
+- we can assign value to a variable by using `=` operator. the syntax is:
+
+  ```go
+  variableName = value
+  ```
+
+- we must use the variable after we declare it, otherwise we will get an error.
+- here we make use of variable by print it out with `fmt.Println()` function. the syntax is:
+
+  ```go
+  fmt.Println(variableName)
+  ```
+
+- we can also declare package level variable by using `var` keyword outside any function.
+- now we create a function `saySomething` that return a string in the `main.go` file.
+- we can use short declaration operator `:=` to declare and assign value to a variable. the syntax is:
+
+  ```go
+  variableName := value // the data type will be inferred from the type of value
+  ```
+
+- function in Go can return more than 1 value, checkout function `saySomethingElse` that return `string` and `int`.
+- checkout the code in [variable-and-function.go](variable-and-function.go) file.
